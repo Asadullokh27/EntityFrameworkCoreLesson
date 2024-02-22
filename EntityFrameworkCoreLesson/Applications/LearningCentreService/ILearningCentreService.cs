@@ -2,7 +2,7 @@
 
 namespace EntityFrameworkCoreLesson.Applications.LearningCentreService
 {
-    public class ILearningCentreService
+    public interface ILearningCentreService
     {
 
         public Task<string> CreateLearningCentreAsync(LearningCentre learningcentre);

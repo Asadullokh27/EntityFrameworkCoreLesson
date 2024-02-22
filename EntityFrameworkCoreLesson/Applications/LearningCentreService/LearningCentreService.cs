@@ -29,14 +29,15 @@ namespace EntityFrameworkCoreLesson.Applications.LearningCentreService
             return item;
         }
 
-        public async Task<LearningCentre> GetPhoneStoreByIdAsync(int id)
+        public async Task<LearningCentre> GetLearningCentreByIdAsync(int id)
         {
             LearningCentre? item = await _context.LearningCentres.FirstOrDefaultAsync(predicate: x => x.Id == id);
 
             return item!;
         }
 
-        public async Task<string> UpdatePhoneStoreAsync(int id, LearningCentre centre)
+
+        public async Task<string> UpdateLearningCentreAsync(int id, LearningCentre centre)
         {
             var item = await _context.LearningCentres.FirstOrDefaultAsync(x => x.Id == id);
 
@@ -64,6 +65,5 @@ namespace EntityFrameworkCoreLesson.Applications.LearningCentreService
             }
             return "No, someting went wrong";
         }
-
     }
 }
